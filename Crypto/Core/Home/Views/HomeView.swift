@@ -11,6 +11,7 @@ struct HomeView: View {
     
     @State private var showPortfolio: Bool = false
     
+    
     var body: some View {
         ZStack{
             Color.theme.background
@@ -21,6 +22,11 @@ struct HomeView: View {
                 
                 homeHeader
                
+                List{
+                    CoinRowView(coin: DeveloperPreview.instance.coin, showHoldingsColumn: false)
+                }.listStyle(PlainListStyle())
+                
+                
                 Spacer(minLength: 0)
                 
                 
